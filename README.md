@@ -2,6 +2,13 @@
 
 This repository is intended to be used to train a vision model for FALCO on CURC infrastructure using Heridal dataset for now.  
 
+1. create a curc account (you need PUTTY software to be able to login)
+2. After logging in, create an ssh key to be able to clone the git repository 
+3. clone it using ssh
+Login error possible with it -- don't use sudo!
+run: 
+eval `ssh-agent -s`
+ssh-add ~/.ssh/id_rsa (or whatever key file you are using)
 
 Todo
 
