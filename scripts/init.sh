@@ -1,10 +1,13 @@
 #!/bin/bash
+
 #SBATCH --partition=amilan
 #SBATCH --job-name=train-job
 #SBATCH --output=train-job.%j.out
 #SBATCH --time=00:30:00
 #SBATCH --qos=normal
 #SBATCH --nodes=1
+#SBATCH --mail-type=ALL
+#SBATCH --mail-user=ghritachi.mahajani@colorado.edu
 
 codedir=/home/$USER/train_falco
 cd /projects/$USER
@@ -21,13 +24,13 @@ conda activate yolo
 # need python<=3.12
 # pip install -r $codedir/requirementxt
 
-echo "Enter yolo model to train"
-read model
+# echo "Enter yolo model to train"
+# read model
 # python "../../$codedir/load_data.py" $model
 
 cp -r /projects/$USER/Heridal-2 $SLURM_SCRATCH # takes a few
 # next time use time utility 5m:15s
 
-python "$codedir/yolo.py" $model
+time python "$codedir/yolo.py"
 
 
