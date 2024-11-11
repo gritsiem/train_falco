@@ -1,9 +1,5 @@
 name: yolo
-channels:
-  - conda-forge
 dependencies:
-  - python>=3.5
-  - anaconda
-  - roboflow
-  - yolo
-  - python-dotenv
+  - pip
+  - pip:
+    - -r file:requirements.txt
