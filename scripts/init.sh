@@ -1,9 +1,10 @@
 #!/bin/bash
 
-#SBATCH --partition=amilan
+#SBATCH --gres=GPU
+#SBATCH --partition=aa100
 #SBATCH --job-name=train-job
 #SBATCH --output=train-job.%j.out
-#SBATCH --time=00:30:00
+#SBATCH --time=01:00:00
 #SBATCH --qos=normal
 #SBATCH --nodes=1
 #SBATCH --mail-type=ALL
