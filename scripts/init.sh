@@ -1,6 +1,6 @@
 #!/bin/bash
 
-#SBATCH --gres=GPU
+#SBATCH --gres=gpu
 #SBATCH --partition=aa100
 #SBATCH --job-name=train-job
 #SBATCH --output=train-job.%j.out
